@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-oxblood: #2b060b;
+  --color-parchment: #f7f2ea;
+  --color-ink: #5c0d15;
+  --color-wine: #7a1420;
+  --color-cream: #fbf6ef;
+  --color-letter: #fdfaf4;
+  --color-letter-ink: #4a2a26;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-script: var(--font-pinyon), cursive;
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--color-oxblood);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Speck field standing in for paper grain: three offset dot lattices at
+   differing tile sizes so no repeat is legible at phone width. */
+@utility grain {
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+  background-image: radial-gradient(
+      circle at 18% 22%,
+      rgb(92 13 21 / 0.05) 0 1px,
+      transparent 2px
+    ),
+    radial-gradient(circle at 72% 61%, rgb(92 13 21 / 0.04) 0 1px, transparent 2px),
+    radial-gradient(circle at 41% 84%, rgb(92 13 21 / 0.05) 0 1px, transparent 2px);
+  background-size: 120px 120px, 90px 90px, 150px 150px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    letter-spacing: 0.6em;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.34em;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.06);
+  }
+  to {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawShort {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes flap {
+  0% {
+    transform: perspective(900px) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(900px) rotateX(-168deg);
+  }
+}
+
+@keyframes pull {
+  0% {
+    transform: translateY(34%) scale(0.94);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-58%) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes bloom {
+  from {
+    opacity: 0;
+    transform: scale(0.965) translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes inkline {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes sink {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
