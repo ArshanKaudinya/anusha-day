@@ -18,8 +18,7 @@ const pinyon = Pinyon_Script({
 });
 
 export const metadata: Metadata = {
-  title: "For Anusha",
-  description: "There is something I have been carrying around for a while.",
+  title: "anusha's letter",
 };
 
 export const viewport: Viewport = {

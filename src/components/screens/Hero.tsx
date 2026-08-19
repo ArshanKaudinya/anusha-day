@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Hero({ onBegin }: { onBegin: () => void }) {
   return (
     <div className="relative z-[2] flex min-h-svh flex-col">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 animate-[kenburns_22s_ease-out_both]">
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="relative aspect-[1280/853] w-full animate-[fadeIn_2.2s_both]">
           <Image
-            src="/hero.jpg"
+            src="/anusha.jpeg"
             alt=""
             fill
             priority
@@ -26,10 +26,10 @@ export default function Hero({ onBegin }: { onBegin: () => void }) {
           Anusha
         </div>
         <div className="mt-[22px] max-w-[19ch] animate-[rise_1.9s_1.3s_both] text-[23px] font-light leading-[1.45] text-cream/[.94] text-pretty">
-          There is something I have been carrying around for a while.
+          Now that I get to ask you.
         </div>
         <div className="mt-[14px] animate-[rise_1.9s_1.9s_both] text-[19px] italic text-cream/[.62]">
-          Let me say it properly.
+          I wanted to make it special :p
         </div>
       </div>
 
@@ -38,9 +38,6 @@ export default function Hero({ onBegin }: { onBegin: () => void }) {
         onClick={onBegin}
         className="relative z-[3] w-full animate-[fadeIn_2s_2.4s_both] px-[30px] pb-[54px]"
       >
-        <div className="mb-[14px] text-center text-[14px] tracking-[.12em] text-cream/[.55]">
-          sound on, if you can
-        </div>
         <div className="flex items-center justify-center gap-[14px] rounded-[2px] border border-cream/[.45] bg-oxblood/[.26] px-[22px] py-[18px] backdrop-blur-[3px] transition-[background-color,border-color] duration-500 hover:border-cream/[.85] hover:bg-oxblood/50">
           <span className="text-[19px] uppercase tracking-[.16em] text-cream">
             Open

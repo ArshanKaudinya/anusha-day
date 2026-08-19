@@ -1,59 +1,43 @@
-const SWAN_BODY =
-  "M20 34 Q30 20 40 16 Q54 14 50 30 Q58 62 60 100 Q62 126 92 142 Q130 128 168 132 Q182 134 190 140 Q196 130 198 116 Q192 134 188 150 Q178 176 152 186 Q120 196 96 190 Q72 184 66 170 Q60 158 64 148 Q54 128 52 100 Q50 62 38 34 Q30 36 20 34 Z";
+const NECK =
+  "M145 132 C152 136 156 139 156 143 C147 140 140 133 137 128 C132 116 122 103 111 90 C99 76 91 62 91 48 C91 45 92 42 95 39 C98 36 103 34 109 34 C114 34 121 36.5 126 40 C131 43 133.5 47 133.5 52 C133.5 55 132 58 131 63 C131 68 134.5 73 137.5 79";
+
+const WING =
+  "M135 126 C122 121 102 110 88 111 C74 112 56 119 36 117 C42 124 53 131 65 133 C63 135 60 136 58 136 C62 140 79 151 100 153 C110 154 122 152 128 148";
+
+const BILL = "M132.5 63.5 C135 68 137.5 73.5 137.5 79";
 
 export default function Swan() {
   return (
     <div className="relative z-[2] flex min-h-svh animate-[fadeIn_1.4s_both] flex-col justify-center px-[34px] pb-[96px] pt-[80px]">
-      <div className="animate-[settle_2s_.2s_both] text-center text-[12px] uppercase tracking-[.34em] text-ink/40">
-        the swan
-      </div>
-
       <div className="mb-[12px] mt-[44px] animate-[float_9s_4.6s_ease-in-out_infinite]">
         <svg
-          viewBox="10 6 200 198"
+          viewBox="28 26 136 136"
           aria-hidden="true"
           className="mx-auto block h-auto w-[78%] overflow-visible"
         >
           <g
             fill="none"
             stroke="#7a1420"
+            strokeWidth="1.3"
             strokeLinejoin="round"
             strokeLinecap="round"
+            strokeDasharray="300"
           >
             <path
-              d={SWAN_BODY}
-              strokeWidth="1.5"
-              strokeDasharray="1200"
-              className="animate-[draw_3.8s_.3s_ease-out_both]"
+              d={NECK}
+              pathLength="300"
+              className="animate-[drawShort_3s_.3s_ease-out_both]"
             />
             <path
-              d="M86 148 Q120 130 156 136 Q172 140 180 148"
-              strokeWidth=".9"
-              opacity=".4"
-              strokeDasharray="300"
-              className="animate-[drawShort_2s_3.4s_ease-out_both]"
+              d={WING}
+              pathLength="300"
+              className="animate-[drawShort_2s_2.2s_ease-out_both]"
             />
             <path
-              d="M94 162 Q124 150 152 158"
-              strokeWidth=".8"
-              opacity=".26"
-              strokeDasharray="300"
-              className="animate-[drawShort_1.8s_3.9s_ease-out_both]"
-            />
-            <circle
-              cx="42"
-              cy="24"
-              r="1.3"
-              fill="#7a1420"
-              stroke="none"
-              className="animate-[fadeIn_.8s_3.2s_both]"
-            />
-            <path
-              d="M14 196 Q70 190 118 194 Q166 198 206 192"
-              strokeWidth=".8"
-              opacity=".2"
-              strokeDasharray="300"
-              className="animate-[drawShort_2.6s_4.2s_ease-out_both]"
+              d={BILL}
+              pathLength="300"
+              strokeWidth="1.1"
+              className="animate-[drawShort_.6s_3.6s_ease-out_both]"
             />
           </g>
         </svg>
@@ -64,8 +48,7 @@ export default function Swan() {
           they choose once
         </div>
         <div className="mx-auto mt-[22px] max-w-[26ch] animate-[rise_2s_5s_both] text-[21px] font-light leading-[1.55] text-ink/80 text-pretty">
-          and then they stay. I thought about that for a while, and then I
-          thought about you.
+          and swans obviously remind me of you, the choice i'm making.
         </div>
       </div>
     </div>

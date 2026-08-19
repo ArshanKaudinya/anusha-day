@@ -8,6 +8,7 @@ import Letter from "@/components/screens/Letter";
 
 const LAST_SCREEN = 4;
 const ENVELOPE_DURATION = 2600;
+const GESTURES = ["pointerdown", "touchstart", "keydown"] as const;
 
 export default function Experience() {
   const [screen, setScreen] = useState(1);
@@ -16,11 +17,35 @@ export default function Experience() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const audio = new Audio("/our-song.mp3");
+    const audio = new Audio("/cupids.mp3");
     audio.loop = true;
     audio.volume = 0.5;
+    audio.preload = "auto";
     audioRef.current = audio;
+
+    // Unprompted autoplay is refused by most mobile browsers (always on iOS),
+    // so retry on whatever the first interaction turns out to be.
+    let started = false;
+    const attempt = () => {
+      if (started) return;
+      audio
+        .play()
+        .then(() => {
+          started = true;
+          detach();
+        })
+        .catch(() => {});
+    };
+    const detach = () => {
+      for (const type of GESTURES) document.removeEventListener(type, attempt);
+    };
+
+    attempt();
+    for (const type of GESTURES)
+      document.addEventListener(type, attempt, { passive: true });
+
     return () => {
+      detach();
       audio.pause();
       audioRef.current = null;
     };

@@ -23,7 +23,7 @@ export default function Letter() {
             properly, and I would like you to be mine.
           </p>
           <p className="animate-[inkline_1.6s_3.4s_both] text-[23px] italic text-wine">
-            So &mdash; will you be my girlfriend?
+            May I be your boyfriend?
           </p>
         </div>
         <div className="mt-[36px] flex animate-[inkline_1.6s_4.2s_both] flex-col items-end gap-[6px]">
@@ -34,10 +34,6 @@ export default function Letter() {
             Arshan
           </div>
         </div>
-      </div>
-
-      <div className="mt-[28px] animate-[fadeIn_2.4s_5s_both] text-center text-[17px] italic text-ink/45">
-        no buttons. just tell me in person.
       </div>
     </div>
   );
