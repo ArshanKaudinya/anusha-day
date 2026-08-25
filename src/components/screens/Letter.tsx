@@ -13,10 +13,13 @@ export default function Letter() {
             I still think that way and my adoration for your personality and your existence in my life grows much stronger each day.
           </p>
           <p className="animate-[inkline_1.4s_2.6s_both]">
-            You're really well read, emotionally adept, the nicest and the prettiest girl I've had in my life and I would never want to lose that.
+            You're really well read, emotionally adept, the nicest and the prettiest girl I've had in my life and I would never want to lose that. I love to see you smile and it brings me so much joy to see you happy. Songs remind me of you, so do the movies and the reels.
           </p>
           <p className="animate-[inkline_1.4s_2.6s_both]">
             For more than a month, I've known that this would be the day I ask you out but I'm still very nervous about this!!
+          </p>
+          <p className="animate-[inkline_1.4s_2.6s_both]">
+            I'm not very good at writing really, I just want to say that I can not imagine myself with anyone but you and I'm really grateful for you :p
           </p>
           <p className="animate-[inkline_1.6s_3.4s_both] text-[23px] italic text-wine">
             May I be your boyfriend, my pulchritudinous love?
