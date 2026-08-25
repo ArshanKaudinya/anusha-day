@@ -18,7 +18,7 @@ export default function Hero({ onBegin }: { onBegin: () => void }) {
 
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(43,6,11,0.5)_0%,rgba(43,6,11,0.1)_30%,rgba(43,6,11,0.4)_64%,rgba(43,6,11,0.9)_100%)]" />
 
-      <div className="pointer-events-none relative flex flex-1 flex-col justify-end px-[30px] pb-[46px]">
+      <div className="pointer-events-none relative flex flex-1 flex-col justify-end px-[30px] pb-[64px]">
         <div className="mb-[18px] animate-[settle_1.8s_.3s_both] text-[12px] uppercase tracking-[.34em] text-parchment/70">
           for you, only you
         </div>
@@ -36,17 +36,9 @@ export default function Hero({ onBegin }: { onBegin: () => void }) {
       <button
         type="button"
         onClick={onBegin}
-        className="relative z-[3] w-full animate-[fadeIn_2s_2.4s_both] px-[30px] pb-[54px]"
-      >
-        <div className="flex items-center justify-center gap-[14px] rounded-[2px] border border-cream/[.45] bg-oxblood/[.26] px-[22px] py-[18px] backdrop-blur-[3px] transition-[background-color,border-color] duration-500 hover:border-cream/[.85] hover:bg-oxblood/50">
-          <span className="text-[19px] uppercase tracking-[.16em] text-cream">
-            Open
-          </span>
-          <span className="animate-[breathe_3s_infinite] text-[15px] text-cream/[.85]">
-            &rarr;
-          </span>
-        </div>
-      </button>
+        aria-label="Open"
+        className="absolute inset-0 z-[3] cursor-pointer appearance-none border-0 bg-transparent p-0"
+      />
     </div>
   );
 }

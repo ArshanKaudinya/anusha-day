@@ -12,9 +12,6 @@ export default function Envelope({
 }) {
   return (
     <div className="relative z-[2] flex min-h-svh animate-[fadeIn_1.2s_both] flex-col items-center justify-center px-[34px] pb-[96px] pt-[80px]">
-      <div className="mb-[40px] animate-[settle_1.8s_.2s_both] text-[12px] uppercase tracking-[.34em] text-ink/40">
-        one last thing
-      </div>
 
       {!opening ? (
         <button
